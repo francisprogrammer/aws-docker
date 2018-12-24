@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  generator:
+    build:
+      context: .
+    ports:
+      - '8080:80'
+    image: aspnetcore/generator:up
+  mailserver:
+    image: mailhog/mailhog
+    ports:
+      - '8025:8025'
