@@ -12,5 +12,11 @@ namespace Tests
             var generated = range.Of(() => "");
             Assert.That(range.Count, Is.EqualTo(3));
         }
+
+        [Test]
+        public void Docker_fake()
+        {
+            Assert.Fail("for testing purposes");
+        }
     }
 }
