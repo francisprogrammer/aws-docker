@@ -11,7 +11,8 @@ services:
     restart: unless-stopped
 
   teamcity-agent:
-    image: jetbrains/teamcity-agent:2017.1.2
+    image: jetbrains/teamcity-agent-with-compose:2017.1.2
+    build: ./agent
     environment:
       SERVER_URL: http://teamcity:8111
     volumes:
