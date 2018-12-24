@@ -15,7 +15,7 @@ namespace api.Controllers
     [Route("[action]")]
     public class GenerateController : Controller
     {
-        public const string MAIL_HOST = "mail";
+        public const string MAIL_HOST = "mailserver";
         public const int MAIL_PORT = 1025;
 
         [HttpPost]
@@ -37,7 +37,7 @@ namespace api.Controllers
                 await mailClient.DisconnectAsync(true);
             }
         }
-        
+
         [HttpGet]
         public IEnumerable<string> Names(Range range)
             => range.Of(Name.FullName);

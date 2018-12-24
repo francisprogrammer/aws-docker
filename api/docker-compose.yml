@@ -7,6 +7,7 @@ services:
     ports:
       - '8080:80'
     image: aspnetcore/generator:up
+
   mailserver:
     image: mailhog/mailhog
     ports:
