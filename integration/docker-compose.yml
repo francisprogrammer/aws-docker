@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  generator:
+    image: localregistry:55000/gen:ci-13
+    ports:
+      - '8080:80'
+
+  mailserver:
+    image: mailhog/mailhog
+    ports:
+      - '8025:8025'
+
+  integration:
+    image: localregistry:55000/gen:integration-13

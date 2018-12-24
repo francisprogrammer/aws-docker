@@ -14,7 +14,6 @@ RUN         dotnet restore api/api.csproj
 COPY        . .
 
 # test
-ENV         TEAMCITY_PROJECT_NAME=fake
 RUN         dotnet test tests/tests.csproj
 
 # publish
