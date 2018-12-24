@@ -16,7 +16,7 @@ namespace Tests
         [Test]
         public void Docker_fake()
         {
-            Assert.Fail("for testing purpose only");
+            Assert.Pass("for testing purpose only");
         }
     }
 }
