@@ -2,11 +2,11 @@ version: '3'
 
 services:
   generator:
-    image: localregistry:55000/gen:ci-16
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-10}
 
   mailserver:
     image: mailhog/mailhog
 
   integration:
-    image: localregistry:55000/gen:integration-16
+    image: localregistry:55000/gen:integration-${BUILD_NUMBER-10}
     build: .
