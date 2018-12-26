@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  generator:
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-21}
+    ports:
+      - '80:80'
