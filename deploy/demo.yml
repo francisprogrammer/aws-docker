@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  generator:
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-21}
+    ports:
+      - '8001:80'
+
+  mailserver:
+    image: mailhog/mailhog
+    ports:
+      - '8002:8025'

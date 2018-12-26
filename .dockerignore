@@ -11,3 +11,4 @@ infrastructure/
 **/.gitignore
 LICENSE
 README.md
+**/.vagrant/
