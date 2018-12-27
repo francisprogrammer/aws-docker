@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  generator:
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-21}
+    ports:
+      - '80:80'
+    configs:
+      - source: prodsettings
+        targrt: /publish/appsettings.json
+  
+  configs:
+    prodsettings:
+      file: ./pro.config.json
