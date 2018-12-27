@@ -1,10 +1,20 @@
-version: '3'
+version: '3.3'
 
 services:
   generator:
-    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-21}
-    ports:
-      - '80:80'
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-26}
     environment:
       MAILSERVER__HOST: my-production
       MAILSERVER__PORT: 25
+
+  proxy:
+    image: nginx
+    ports:
+      - '80:80'
+    configs:
+      - source: site.config
+        target: /etc/nginx/conf.d/default.conf
+
+configs:
+  site.config:
+    file: ./site.conf

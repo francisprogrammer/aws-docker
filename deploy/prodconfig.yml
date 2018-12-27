@@ -2,13 +2,13 @@ version: '3.3'
 
 services:
   generator:
-    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-21}
+    image: localregistry:55000/gen:ci-${GENERATOR_BUILD_NUMBER-26}
     ports:
       - '80:80'
     configs:
-      - source: prodsettings
-        targrt: /publish/appsettings.json
+      - source: prodappsettings
+        target: /publish/appsettings.json
   
-  configs:
-    prodsettings:
-      file: ./pro.config.json
+configs:
+  prodappsettings:
+    file: ./prodconfig.json
