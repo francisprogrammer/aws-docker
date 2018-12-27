@@ -10,9 +10,7 @@ RUN pip install --upgrade awscli==1.14.5 s3cmd==2.0.1 python-magic
 RUN apt-get remove -y python-pip
 RUN apt-get remove -y python
 
-ENV AWS_ACCESS_KEY_ID=AKIAJJRB5CWSSUWNPG2A
-ENV AWS_SECRET_ACCESS_KEY=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
-ENV AWS_DEFAULT_REGION=eu-west-2
+
 # VOLUME /root/.aws
 # VOLUME /project
 # WORKDIR /project
