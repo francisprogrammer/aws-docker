@@ -1,0 +1,5 @@
+[profile bless-admin]
+source_profile = blessa-aws
+role_arn = arn:aws:iam::875087233192:role/admin
+region = eu-west-2
+mfa_serial = arn:aws:iam::875087233192:mfa/blessa
